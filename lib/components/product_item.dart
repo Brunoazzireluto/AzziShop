@@ -1,4 +1,6 @@
 import 'package:azzi_shop/models/product.dart';
+import 'package:azzi_shop/pages/product_detail_page.dart';
+import 'package:azzi_shop/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class ProductITem extends StatelessWidget {
@@ -30,9 +32,15 @@ class ProductITem extends StatelessWidget {
           ),
           backgroundColor: Colors.black87,
         ),
-        child: Image.network(
-          product.imageUrl,
-          fit: BoxFit.cover,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.of(context)
+                .pushNamed(AppRoutes.PRODUCT_DETAIL, arguments: product);
+          },
+          child: Image.network(
+            product.imageUrl,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

@@ -1,4 +1,6 @@
+import 'package:azzi_shop/pages/product_detail_page.dart';
 import 'package:azzi_shop/pages/products_overview_page.dart';
+import 'package:azzi_shop/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,6 +24,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: ProductsOverviewPage(),
+      routes: {
+        AppRoutes.PRODUCT_DETAIL: (context) => const ProductDetailPage()
+      },
     );
   }
 }
