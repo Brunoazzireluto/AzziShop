@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             secondary: Colors.cyanAccent,
           ),
         ),
-        home: ProductsOverviewPage(),
+        home: const ProductsOverviewPage(),
         routes: {
           AppRoutes.PRODUCT_DETAIL: (context) => const ProductDetailPage()
         },
